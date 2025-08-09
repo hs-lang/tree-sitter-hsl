@@ -42,6 +42,7 @@
   "Starfield"
   "Manifest"
   "CloseManifest"
+  "DockCargo"
   "UnloadCargo"
   "CloseCargo"
 ] @keyword

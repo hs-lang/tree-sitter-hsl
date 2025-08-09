@@ -42,7 +42,14 @@ module.exports = grammar({
       optional($.variadic),
       optional($.function_arguments),
       repeat($.expression),
+      optional($.function_return),
       "May the force be with you."
+    ),
+
+    function_return: $ => seq(
+      "CargoDock",
+      repeat($.argument),
+      "CloseCargo",
     ),
 
     function_arguments: $ => seq(
@@ -90,7 +97,7 @@ module.exports = grammar({
       "CloseManifest",
       "UnloadCargo",
       repeat(
-        $.function_argument
+        $.identifier
       ),
       "CloseCargo",
       "Order executed"
