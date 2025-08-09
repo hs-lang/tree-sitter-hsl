@@ -127,7 +127,7 @@
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "statement"
+            "name": "expression"
           }
         },
         {
@@ -186,7 +186,7 @@
         }
       ]
     },
-    "statement": {
+    "expression": {
       "type": "CHOICE",
       "members": [
         {
@@ -238,7 +238,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "expression"
+          "name": "literal"
         }
       ]
     },
@@ -258,11 +258,34 @@
           }
         },
         {
+          "type": "STRING",
+          "value": "Manifest"
+        },
+        {
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
             "name": "expression"
           }
+        },
+        {
+          "type": "STRING",
+          "value": "CloseManifest"
+        },
+        {
+          "type": "STRING",
+          "value": "UnloadCargo"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "identifier"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "CloseCargo"
         },
         {
           "type": "STRING",
@@ -287,7 +310,7 @@
         }
       ]
     },
-    "expression": {
+    "argument": {
       "type": "CHOICE",
       "members": [
         {

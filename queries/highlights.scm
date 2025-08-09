@@ -40,8 +40,10 @@
   "Execute order"
   "Order executed"
   "Starfield"
-  "Cargo"
+  "Manifest"
+  "CloseManifest"
   "UnloadCargo"
+  "CloseCargo"
 ] @keyword
 
 [

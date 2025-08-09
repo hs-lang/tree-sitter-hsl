@@ -18,11 +18,11 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "identifier",
           "named": true
         },
         {
-          "type": "identifier",
+          "type": "literal",
           "named": true
         }
       ]
@@ -37,11 +37,11 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "declaration",
           "named": true
         },
         {
-          "type": "literal",
+          "type": "function_call",
           "named": true
         }
       ]
@@ -130,6 +130,10 @@
         {
           "type": "expression",
           "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
         }
       ]
     }
@@ -154,11 +158,11 @@
       "required": false,
       "types": [
         {
-          "type": "function_arguments",
+          "type": "expression",
           "named": true
         },
         {
-          "type": "statement",
+          "type": "function_arguments",
           "named": true
         },
         {
@@ -237,25 +241,6 @@
     }
   },
   {
-    "type": "statement",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "declaration",
-          "named": true
-        },
-        {
-          "type": "function_call",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "string",
     "named": true,
     "fields": {},
@@ -315,6 +300,14 @@
     "named": false
   },
   {
+    "type": "CloseCargo",
+    "named": false
+  },
+  {
+    "type": "CloseManifest",
+    "named": false
+  },
+  {
     "type": "Credit",
     "named": false
   },
@@ -348,6 +341,10 @@
   },
   {
     "type": "Judge me by my size, do you ?",
+    "named": false
+  },
+  {
+    "type": "Manifest",
     "named": false
   },
   {

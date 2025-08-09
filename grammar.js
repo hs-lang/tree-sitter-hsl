@@ -41,7 +41,7 @@ module.exports = grammar({
       "far, far away...",
       optional($.variadic),
       optional($.function_arguments),
-      repeat($.statement),
+      repeat($.expression),
       "May the force be with you."
     ),
 
@@ -60,7 +60,7 @@ module.exports = grammar({
       field("id", $.identifier)
     ),
 
-    statement: $ => choice(
+    expression: $ => choice(
       $.function_call,
       $.declaration,
       // $.operation,
@@ -77,15 +77,22 @@ module.exports = grammar({
         "I am your father.",
         "Judge me by my size, do you ?"
       ),
-      $.expression
+      $.literal
     ),
 
     function_call: $ => seq(
       "Execute order",
       field("name", $.identifier),
+      "Manifest",
       repeat(
         $.expression
       ),
+      "CloseManifest",
+      "UnloadCargo",
+      repeat(
+        $.identifier
+      ),
+      "CloseCargo",
       "Order executed"
     ),
 
@@ -94,7 +101,7 @@ module.exports = grammar({
       field("count", $.unsigned_integer)
     ),
 
-    expression: $ => choice($.identifier, $.literal),
+    argument: $ => choice($.identifier, $.literal),
     
     identifier: _ => /[a-zA-Z_][a-zA-Z0-9_]*/,
 
