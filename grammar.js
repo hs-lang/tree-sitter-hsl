@@ -46,9 +46,9 @@ module.exports = grammar({
     ),
 
     function_arguments: $ => seq(
-      "Cargo",
+      "Manifest",
       repeat($.function_argument),
-      "UnloadCargo"
+      "CloseManifest"
     ),
 
     function_argument: $ => seq(

@@ -296,10 +296,6 @@
     "named": false
   },
   {
-    "type": "Cargo",
-    "named": false
-  },
-  {
     "type": "CloseCargo",
     "named": false
   },

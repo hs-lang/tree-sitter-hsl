@@ -141,7 +141,7 @@
       "members": [
         {
           "type": "STRING",
-          "value": "Cargo"
+          "value": "Manifest"
         },
         {
           "type": "REPEAT",
@@ -152,7 +152,7 @@
         },
         {
           "type": "STRING",
-          "value": "UnloadCargo"
+          "value": "CloseManifest"
         }
       ]
     },
