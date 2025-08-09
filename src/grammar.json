@@ -67,7 +67,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "function_arguments"
+              "name": "extern_function_argument"
             },
             {
               "type": "BLANK"
@@ -77,6 +77,28 @@
         {
           "type": "STRING",
           "value": "Jamsignal"
+        }
+      ]
+    },
+    "extern_function_argument": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "Holotext"
+            },
+            {
+              "type": "STRING",
+              "value": "Credit"
+            },
+            {
+              "type": "STRING",
+              "value": "Signal"
+            }
+          ]
         }
       ]
     },
@@ -290,6 +312,39 @@
           }
         },
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "function_call_arguments"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "function_call_returns"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": "Order executed"
+        }
+      ]
+    },
+    "function_call_arguments": {
+      "type": "SEQ",
+      "members": [
+        {
           "type": "STRING",
           "value": "Manifest"
         },
@@ -297,13 +352,18 @@
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "expression"
+            "name": "argument"
           }
         },
         {
           "type": "STRING",
           "value": "CloseManifest"
-        },
+        }
+      ]
+    },
+    "function_call_returns": {
+      "type": "SEQ",
+      "members": [
         {
           "type": "STRING",
           "value": "UnloadCargo"
@@ -318,10 +378,6 @@
         {
           "type": "STRING",
           "value": "CloseCargo"
-        },
-        {
-          "type": "STRING",
-          "value": "Order executed"
         }
       ]
     },

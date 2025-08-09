@@ -31,8 +31,16 @@ module.exports = grammar({
       "Hypersignal",
       field("name", $.identifier),
       optional($.variadic),
-      optional($.function_arguments),
+      optional($.extern_function_argument),
       "Jamsignal"
+    ),
+
+    extern_function_argument: $ => seq(
+      choice(
+        "Holotext",
+        "Credit",
+        "Signal"
+      ),
     ),
 
     function_definition: $ => seq(
@@ -90,17 +98,23 @@ module.exports = grammar({
     function_call: $ => seq(
       "Execute order",
       field("name", $.identifier),
+      optional($.function_call_arguments),
+      optional($.function_call_returns),
+      "Order executed"
+    ),
+
+    function_call_arguments: $ => seq(
       "Manifest",
-      repeat(
-        $.expression
-      ),
-      "CloseManifest",
+      repeat($.argument),
+      "CloseManifest"
+    ),
+
+    function_call_returns: $ => seq(
       "UnloadCargo",
       repeat(
         $.function_argument
       ),
       "CloseCargo",
-      "Order executed"
     ),
 
     variadic: $ => seq(
