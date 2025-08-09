@@ -90,7 +90,7 @@ module.exports = grammar({
       "CloseManifest",
       "UnloadCargo",
       repeat(
-        $.identifier
+        $.function_argument
       ),
       "CloseCargo",
       "Order executed"

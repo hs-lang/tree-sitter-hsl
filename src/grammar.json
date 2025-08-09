@@ -280,7 +280,7 @@
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "function_argument"
           }
         },
         {
