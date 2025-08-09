@@ -151,7 +151,7 @@
           "named": true
         },
         {
-          "type": "identifier",
+          "type": "function_argument",
           "named": true
         }
       ]
