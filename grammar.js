@@ -65,7 +65,8 @@ module.exports = grammar({
       field("id", $.identifier)
     ),
 
-    type: _ => choice(
+    type: $ => choice(
+      seq("Target<", $.type, ">"),
       "Holotext",
       "Credit",
       "Signal"

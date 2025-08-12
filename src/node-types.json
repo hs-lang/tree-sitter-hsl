@@ -355,7 +355,17 @@
   {
     "type": "type",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "variadic",
@@ -467,6 +477,10 @@
   },
   {
     "type": "Starfield",
+    "named": false
+  },
+  {
+    "type": "Target<",
     "named": false
   },
   {
