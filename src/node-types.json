@@ -396,6 +396,10 @@
     "named": false
   },
   {
+    "type": "<",
+    "named": false
+  },
+  {
     "type": "<(-.-)>",
     "named": false
   },
@@ -408,7 +412,7 @@
     "named": false
   },
   {
-    "type": "Beacon<",
+    "type": "Beacon",
     "named": false
   },
   {
@@ -480,7 +484,7 @@
     "named": false
   },
   {
-    "type": "Target<",
+    "type": "Target",
     "named": false
   },
   {

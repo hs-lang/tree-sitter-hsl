@@ -66,7 +66,7 @@ module.exports = grammar({
     ),
 
     type: $ => choice(
-      seq("Target<", $.type, ">"),
+      seq("Target", "<", $.type, ">"),
       "Holotext",
       "Credit",
       "Signal"
@@ -122,7 +122,7 @@ module.exports = grammar({
     argument: $ => choice(
       $.identifier,
       // This is to call functions with pointer args
-      seq("Beacon<", $.identifier, ">"),
+      seq("Beacon", "<", $.identifier, ">"),
       $.literal
     ),
     

@@ -220,7 +220,11 @@
           "members": [
             {
               "type": "STRING",
-              "value": "Target<"
+              "value": "Target"
+            },
+            {
+              "type": "STRING",
+              "value": "<"
             },
             {
               "type": "SYMBOL",
@@ -416,7 +420,11 @@
           "members": [
             {
               "type": "STRING",
-              "value": "Beacon<"
+              "value": "Beacon"
+            },
+            {
+              "type": "STRING",
+              "value": "<"
             },
             {
               "type": "SYMBOL",

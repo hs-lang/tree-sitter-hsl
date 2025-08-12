@@ -74,6 +74,7 @@
   "Holotext"
   "Credit"
   "Signal"
+  "Target"
 ] @type.builtin
 
 ; Booleans
