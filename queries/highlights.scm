@@ -68,6 +68,25 @@
   "May the force be with you."
 ] @keyword.function
 
+; Puncts
+
+; Operations
+
+[
+  "Tune"
+  "CloseTune"
+  "Boost"
+  "CloseBoost"
+  "Drain"
+  "CloseDrain"
+  "Amplify"
+  "CloseAmplify"
+  "Disperse"
+  "CloseDisperse"
+  "Salvage"
+  "CloseSalvage"
+] @operator
+
 ; Types
 
 [

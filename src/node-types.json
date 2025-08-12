@@ -23,11 +23,11 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "literal",
           "named": true
         },
         {
-          "type": "literal",
+          "type": "variable",
           "named": true
         }
       ]
@@ -522,6 +522,21 @@
       "types": [
         {
           "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variable",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
           "named": true
         }
       ]

@@ -601,6 +601,19 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "variable"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "literal"
+        }
+      ]
+    },
+    "variable": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
           "name": "identifier"
         },
         {
@@ -623,10 +636,6 @@
               "value": ">"
             }
           ]
-        },
-        {
-          "type": "SYMBOL",
-          "name": "literal"
         }
       ]
     },
