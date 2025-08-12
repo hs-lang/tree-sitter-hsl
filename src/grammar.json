@@ -260,6 +260,194 @@
         {
           "type": "SYMBOL",
           "name": "declaration"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operation"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "assign_op_integer"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "assign_op_string"
+        }
+      ]
+    },
+    "operation": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "add_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "sub_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "div_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "mul_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "mod_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "integer"
+        }
+      ]
+    },
+    "assign_op_integer": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Tune"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operation"
+        },
+        {
+          "type": "STRING",
+          "value": "CloseTune"
+        }
+      ]
+    },
+    "assign_op_string": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Tune"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        },
+        {
+          "type": "STRING",
+          "value": "CloseTune"
+        }
+      ]
+    },
+    "add_op": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Boost"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operation"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operation"
+        },
+        {
+          "type": "STRING",
+          "value": "CloseBoost"
+        }
+      ]
+    },
+    "sub_op": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Drain"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operation"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operation"
+        },
+        {
+          "type": "STRING",
+          "value": "CloseDrain"
+        }
+      ]
+    },
+    "div_op": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Disperse"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operation"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operation"
+        },
+        {
+          "type": "STRING",
+          "value": "CloseDisperse"
+        }
+      ]
+    },
+    "mul_op": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Amplify"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operation"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operation"
+        },
+        {
+          "type": "STRING",
+          "value": "CloseAmplify"
+        }
+      ]
+    },
+    "mod_op": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Salvage"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operation"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "operation"
+        },
+        {
+          "type": "STRING",
+          "value": "CloseSalvage"
         }
       ]
     },

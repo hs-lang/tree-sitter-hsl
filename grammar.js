@@ -75,8 +75,28 @@ module.exports = grammar({
     expression: $ => choice(
       $.function_call,
       $.declaration,
-      // $.operation,
+      $.operation,
+      $.assign_op_integer,
+      $.assign_op_string,
     ),
+
+    operation: $ => choice(
+      $.add_op,
+      $.sub_op,
+      $.div_op,
+      $.mul_op,
+      $.mod_op,
+      $.integer
+    ),
+
+    assign_op_integer: $ => seq("Tune", $.identifier, $.operation, "CloseTune"),
+    assign_op_string: $ => seq("Tune", $.identifier, $.string, "CloseTune"),
+
+    add_op: $ => seq("Boost", $.operation, $.operation, "CloseBoost"),
+    sub_op: $ => seq("Drain", $.operation, $.operation, "CloseDrain"),
+    div_op: $ => seq("Disperse", $.operation, $.operation, "CloseDisperse"),
+    mul_op: $ => seq("Amplify", $.operation, $.operation, "CloseAmplify"),
+    mod_op: $ => seq("Salvage", $.operation, $.operation, "CloseSalvage"),
 
     declaration: $ => seq(
       choice(
