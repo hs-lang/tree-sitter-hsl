@@ -86,11 +86,12 @@ module.exports = grammar({
       $.div_op,
       $.mul_op,
       $.mod_op,
-      $.integer
+      $.integer,
+      $.variable
     ),
 
-    assign_op_integer: $ => seq("Tune", $.identifier, $.operation, "CloseTune"),
-    assign_op_string: $ => seq("Tune", $.identifier, $.string, "CloseTune"),
+    assign_op_integer: $ => seq("Tune", $.variable, $.operation, "CloseTune"),
+    assign_op_string: $ => seq("Tune", $.variable, $.string, "CloseTune"),
 
     add_op: $ => seq("Boost", $.operation, $.operation, "CloseBoost"),
     sub_op: $ => seq("Drain", $.operation, $.operation, "CloseDrain"),

@@ -42,11 +42,11 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "operation",
           "named": true
         },
         {
-          "type": "operation",
+          "type": "variable",
           "named": true
         }
       ]
@@ -61,11 +61,11 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "string",
           "named": true
         },
         {
-          "type": "string",
+          "type": "variable",
           "named": true
         }
       ]
@@ -453,6 +453,10 @@
         },
         {
           "type": "sub_op",
+          "named": true
+        },
+        {
+          "type": "variable",
           "named": true
         }
       ]
