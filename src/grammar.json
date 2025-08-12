@@ -395,6 +395,23 @@
           "name": "identifier"
         },
         {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "Beacon<"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "identifier"
+            },
+            {
+              "type": "STRING",
+              "value": ">"
+            }
+          ]
+        },
+        {
           "type": "SYMBOL",
           "name": "literal"
         }

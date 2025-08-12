@@ -118,7 +118,12 @@ module.exports = grammar({
       field("count", $.unsigned_integer)
     ),
 
-    argument: $ => choice($.identifier, $.literal),
+    argument: $ => choice(
+      $.identifier,
+      // This is to call functions with pointer args
+      seq("Beacon<", $.identifier, ">"),
+      $.literal
+    ),
     
     identifier: _ => /[a-zA-Z_][a-zA-Z0-9_]*/,
 

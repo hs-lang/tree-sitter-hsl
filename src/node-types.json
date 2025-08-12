@@ -390,7 +390,15 @@
     "named": false
   },
   {
+    "type": ">",
+    "named": false
+  },
+  {
     "type": "A long time ago in a",
+    "named": false
+  },
+  {
+    "type": "Beacon<",
     "named": false
   },
   {
