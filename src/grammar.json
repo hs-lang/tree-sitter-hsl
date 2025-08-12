@@ -640,6 +640,27 @@
               "value": ">"
             }
           ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "Retrieve"
+            },
+            {
+              "type": "STRING",
+              "value": "<"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "identifier"
+            },
+            {
+              "type": "STRING",
+              "value": ">"
+            }
+          ]
         }
       ]
     },
