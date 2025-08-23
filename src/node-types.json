@@ -140,6 +140,10 @@
           "named": true
         },
         {
+          "type": "if_then_else",
+          "named": true
+        },
+        {
           "type": "operation",
           "named": true
         }
@@ -340,6 +344,25 @@
       "types": [
         {
           "type": "argument",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_then_else",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "variable",
           "named": true
         }
       ]
@@ -647,6 +670,10 @@
     "named": false
   },
   {
+    "type": "Do, or do not. There is no try.",
+    "named": false
+  },
+  {
     "type": "Drain",
     "named": false
   },
@@ -727,11 +754,19 @@
     "named": false
   },
   {
+    "type": "These aren't the droids you're looking for.",
+    "named": false
+  },
+  {
     "type": "Tune",
     "named": false
   },
   {
     "type": "UnloadCargo",
+    "named": false
+  },
+  {
+    "type": "You have failed me for the last time.",
     "named": false
   },
   {

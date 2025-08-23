@@ -272,6 +272,58 @@
         {
           "type": "SYMBOL",
           "name": "assign_op_string"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "if_then_else"
+        }
+      ]
+    },
+    "if_then_else": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Do, or do not. There is no try."
+        },
+        {
+          "type": "SYMBOL",
+          "name": "variable"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "expression"
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "These aren't the droids you're looking for."
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "expression"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": "You have failed me for the last time."
         }
       ]
     },

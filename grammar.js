@@ -78,6 +78,18 @@ module.exports = grammar({
       $.operation,
       $.assign_op_integer,
       $.assign_op_string,
+      $.if_then_else,
+    ),
+
+    if_then_else: $ => seq(
+      "Do, or do not. There is no try.",
+      $.variable,
+      repeat($.expression),
+      optional(seq(
+        "These aren't the droids you're looking for.",
+        repeat($.expression),
+      )),
+      "You have failed me for the last time.",
     ),
 
     operation: $ => choice(

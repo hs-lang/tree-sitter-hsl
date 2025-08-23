@@ -48,6 +48,12 @@
 ] @keyword
 
 [
+  "Do, or do not. There is no try."
+  "These aren't the droids you're looking for."
+  "You have failed me for the last time."
+] @keyword.control.conditional
+
+[
   "Hypersignal"
   "Jamsignal"
 ] @keyword.control.import
