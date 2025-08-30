@@ -72,6 +72,11 @@
     }
   },
   {
+    "type": "base_type",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "bool",
     "named": true,
     "fields": {}
@@ -95,6 +100,10 @@
         },
         {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "type",
           "named": true
         }
       ]
@@ -544,11 +553,19 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": false,
+      "multiple": true,
+      "required": true,
       "types": [
         {
+          "type": "base_type",
+          "named": true
+        },
+        {
           "type": "type",
+          "named": true
+        },
+        {
+          "type": "unsigned_integer",
           "named": true
         }
       ]
@@ -654,6 +671,10 @@
     "named": false
   },
   {
+    "type": "ClosePackage",
+    "named": false
+  },
+  {
     "type": "CloseSalvage",
     "named": false
   },
@@ -694,19 +715,7 @@
     "named": false
   },
   {
-    "type": "I am a big deal in the resistance.",
-    "named": false
-  },
-  {
-    "type": "I am your father.",
-    "named": false
-  },
-  {
     "type": "Jamsignal",
-    "named": false
-  },
-  {
-    "type": "Judge me by my size, do you ?",
     "named": false
   },
   {
@@ -719,6 +728,10 @@
   },
   {
     "type": "Order executed",
+    "named": false
+  },
+  {
+    "type": "Package",
     "named": false
   },
   {
@@ -746,14 +759,6 @@
     "named": false
   },
   {
-    "type": "That's one hell of a pilot.",
-    "named": false
-  },
-  {
-    "type": "The force is strong with this one.",
-    "named": false
-  },
-  {
     "type": "These aren't the droids you're looking for.",
     "named": false
   },
@@ -767,6 +772,14 @@
   },
   {
     "type": "You have failed me for the last time.",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
     "named": false
   },
   {

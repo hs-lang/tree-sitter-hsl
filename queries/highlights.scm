@@ -59,12 +59,8 @@
 ] @keyword.control.import
 
 [
-  
-  "I am a big deal in the resistance."
-  "The force is strong with this one."
-  "That's one hell of a pilot."
-  "I am your father."
-  "Judge me by my size, do you ?"
+  "Package"  
+  "ClosePackage"
 ] @keyword.storage.type
 
 [

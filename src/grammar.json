@@ -237,6 +237,45 @@
           ]
         },
         {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "base_type"
+            },
+            {
+              "type": "STRING",
+              "value": "["
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "unsigned_integer"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "type"
+                }
+              ]
+            },
+            {
+              "type": "STRING",
+              "value": "]"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "base_type"
+        }
+      ]
+    },
+    "base_type": {
+      "type": "CHOICE",
+      "members": [
+        {
           "type": "STRING",
           "value": "Holotext"
         },
@@ -511,42 +550,32 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "I am a big deal in the resistance."
-            },
-            {
-              "type": "STRING",
-              "value": "The force is strong with this one."
-            },
-            {
-              "type": "STRING",
-              "value": "That's one hell of a pilot."
-            }
-          ]
+          "type": "STRING",
+          "value": "Package"
         },
         {
           "type": "SYMBOL",
           "name": "identifier"
         },
         {
+          "type": "SYMBOL",
+          "name": "type"
+        },
+        {
           "type": "CHOICE",
           "members": [
             {
-              "type": "STRING",
-              "value": "I am your father."
+              "type": "SYMBOL",
+              "name": "literal"
             },
             {
-              "type": "STRING",
-              "value": "Judge me by my size, do you ?"
+              "type": "BLANK"
             }
           ]
         },
         {
-          "type": "SYMBOL",
-          "name": "literal"
+          "type": "STRING",
+          "value": "ClosePackage"
         }
       ]
     },

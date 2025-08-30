@@ -67,6 +67,11 @@ module.exports = grammar({
 
     type: $ => choice(
       seq("Target", "<", $.type, ">"),
+      seq($.base_type, "[", choice($.unsigned_integer, $.type), "]"),
+      $.base_type,
+    ),
+
+    base_type: _ => choice(
       "Holotext",
       "Credit",
       "Signal"
@@ -112,17 +117,11 @@ module.exports = grammar({
     mod_op: $ => seq("Salvage", $.operation, $.operation, "CloseSalvage"),
 
     declaration: $ => seq(
-      choice(
-        "I am a big deal in the resistance.",
-        "The force is strong with this one.",
-        "That's one hell of a pilot.",
-      ),
+      "Package",
       $.identifier,
-      choice(
-        "I am your father.",
-        "Judge me by my size, do you ?"
-      ),
-      $.literal
+      $.type,
+      optional($.literal),
+      "ClosePackage"
     ),
 
     function_call: $ => seq(
