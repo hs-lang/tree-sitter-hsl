@@ -67,7 +67,7 @@ module.exports = grammar({
 
     type: $ => choice(
       seq("Target", "<", $.type, ">"),
-      seq($.base_type, "[", choice($.unsigned_integer, $.type), "]"),
+      seq($.type, "[", $.unsigned_integer, "]"),
       $.base_type,
     ),
 

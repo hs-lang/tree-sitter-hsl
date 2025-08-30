@@ -241,24 +241,15 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "base_type"
+              "name": "type"
             },
             {
               "type": "STRING",
               "value": "["
             },
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "unsigned_integer"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "type"
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "unsigned_integer"
             },
             {
               "type": "STRING",
