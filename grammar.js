@@ -158,7 +158,7 @@ module.exports = grammar({
     
     variable: $ => choice(
       $.identifier,
-      seq($.identifier, "[", $.unsigned_integer, "]"),
+      seq($.identifier, "[", choice($.unsigned_integer, $.variable), "]"),
       // This is to call functions with pointer args
       // This is the equivalent to &
       seq("Beacon", "<", $.identifier, ">"),

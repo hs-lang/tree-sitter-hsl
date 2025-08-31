@@ -704,8 +704,17 @@
               "value": "["
             },
             {
-              "type": "SYMBOL",
-              "name": "unsigned_integer"
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "unsigned_integer"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "variable"
+                }
+              ]
             },
             {
               "type": "STRING",
