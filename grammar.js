@@ -182,7 +182,7 @@ module.exports = grammar({
           $.string_content
         )
       ),
-      token.immediate('"')
+      '"'
     ),
 
     escape_sequence: _ => token.immediate(
